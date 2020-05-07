@@ -17,7 +17,7 @@ import java.util.List;
 
 public class ExtractCurCommitClone {
     public static int getCurCommitCount(int groupId) throws SQLException {
-        DruidPooledConnection connection = DruidUtil.getConnection();
+        DruidPooledConnection connection = 0;
         if (connection == null){
             throw new SQLException("get connection failed");
         }
