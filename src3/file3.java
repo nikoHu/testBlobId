@@ -23,8 +23,6 @@ public class ExtractCurCommitClone {
         }
         String sql = String.format("select count(*) as num from %s where groupId=%d and isCurCommit=1", Config.TABLE, groupId);
         PreparedStatement statement = connection.prepareStatement(sql);
-        ResultSet resultSet = statement.executeQuery();
-        int count = 0;
         if (resultSet.next()){
             count = resultSet.getInt("num");
         }
