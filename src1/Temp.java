@@ -1,26 +1,22 @@
 public class Temp {
     public static void main(String[] args) {
         //////////////////////////////////////////////////////////////////////////////////////////////
-        if (log.isDebugEnabled())
+        if (log.isDebugEnabled()) {
             log.debug(sm.getString("deltaManager.receiveMessage.delta", getName(), msg.getSessionID()));
+        }
         //////////////////////////////////////////////////////////////////////////////////////////////
-        Class<?>[] inf = type.getInterfaces();
+        Class<?>[] interfaces = type.getInterfaces();
         Method mp = null;
-        for (Class<?> aClass : inf) {
+        for (Class<?> iface : interfaces) {
             ***
         }
         //////////////////////////////////////////////////////////////////////////////////////////////
         if (!deploymentDescriptor.exists()) {
-            throw new BuildException("Deployment descriptor: " + deploymentDescriptor + " does not exist.");
+            throw new BuildException("Deployment descriptor: %s does not exist.", deploymentDescriptor);
         }
         //////////////////////////////////////////////////////////////////////////////////////////////
-        i = (b + a) / 2;
+        i = (b + a) >>> 1;
         //////////////////////////////////////////////////////////////////////////////////////////////
-        Element currentTest;
-        if (test != null) {
-            currentTest = testElements.get(createDescription(test));
-        } else {
-            currentTest = rootElement;
-        }
+        Element currentTest = test == null ? rootElement : testElements.get(createDescription(test));
     }
 }
